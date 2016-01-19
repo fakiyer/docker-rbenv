@@ -2,15 +2,15 @@ FROM fakiyer/centos-base
 MAINTAINER fakiyer
 
 RUN yum -y update && yum -y install \
-  gcc \
   bzip2 \
-  openssl-devel \
+  gcc \
+  gdbm-devel \
   libyaml-devel \
   libffi-devel \
+  ncurses-devel \
+  openssl-devel \
   readline-devel \
   zlib-devel \
-  gdbm-devel \
-  ncurses-devel \
   && yum clean all
 
 RUN git clone https://github.com/sstephenson/rbenv.git /root/.rbenv
