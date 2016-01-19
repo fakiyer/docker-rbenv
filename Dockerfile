@@ -1,7 +1,7 @@
 FROM centos:7
 MAINTAINER fakiyer
 
-RUN yum -y install \
+RUN yum -y update && yum -y install \
   gcc \
   bzip2 \
   openssl-devel \
@@ -11,6 +11,7 @@ RUN yum -y install \
   zlib-devel \
   gdbm-devel \
   ncurses-devel \
+  && yum clean all
 
 RUN git clone https://github.com/sstephenson/rbenv.git /root/.rbenv
 RUN git clone https://github.com/sstephenson/ruby-build.git /root/.rbenv/plugins/ruby-build
