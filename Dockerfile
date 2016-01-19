@@ -1,4 +1,4 @@
-FROM centos:7
+FROM fakiyer/centos-base
 MAINTAINER fakiyer
 
 RUN yum -y update && yum -y install \
